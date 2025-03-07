@@ -1,0 +1,162 @@
+body {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    background: linear-gradient(45deg, #ff758c, #ff7eb3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+h1, h2 {
+    font-size: 50px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+#poem p {
+    font-size: 28px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);ф/* Общие стили */
+    body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        background-color: #ffe4e1;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 10px;
+    }
+    
+    /* Ввод имени */
+    #start-screen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    input {
+        padding: 10px;
+        font-size: 1.2em;
+        width: 80%;
+        max-width: 400px;
+        margin-bottom: 10px;
+    }
+    
+    button {
+        padding: 10px 20px;
+        font-size: 1.2em;
+        cursor: pointer;
+    }
+    
+    /* Скрытые элементы */
+    .hidden {
+        display: none;
+    }
+    
+    /* Текст */
+    h1, h2 {
+        font-size: 5vw; /* Масштабируемый размер */
+        opacity: 0;
+        transition: opacity 2s ease-in-out;
+    }
+    
+    /* Цветочки */
+    #flowers-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+    
+    .flower {
+        position: absolute;
+        width: 10vw; /* Масштабируемый размер */
+        min-width: 40px;
+        max-width: 100px;
+        opacity: 0;
+        animation: rotate-flower 10s infinite linear;
+    }
+    
+    /* Анимация кружения */
+    @keyframes rotate-flower {
+        0% { transform: rotate(0deg) scale(1); opacity: 1; }
+        50% { transform: rotate(180deg) scale(1.2); }
+        100% { transform: rotate(360deg) scale(1); opacity: 1; }
+    }
+    
+    /* Стихи */
+    #poem p {
+        font-size: 3vw;
+        opacity: 0;
+        transition: opacity 2s ease-in-out;
+    }
+    
+    /* 📌 Медиа-запросы для адаптации под разные устройства */
+    
+    /* 📱 Телефоны */
+    @media (max-width: 600px) {
+        h1, h2 {
+            font-size: 8vw;
+        }
+    
+        #poem p {
+            font-size: 5vw;
+        }
+    
+        .flower {
+            width: 12vw;
+        }
+    }
+    
+    /* 🖥️ Большие экраны */
+    @media (min-width: 1200px) {
+        h1, h2 {
+            font-size: 3vw;
+        }
+    
+        #poem p {
+            font-size: 2vw;
+        }
+    
+        .flower {
+            width: 7vw;
+        }
+    }
+    
+}
+
+#flowers-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.flower {
+    position: absolute;
+    width: 50px;
+    animation: moveFlower linear infinite;
+}
+
+@keyframes moveFlower {
+    0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}

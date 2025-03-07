@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С 8 марта!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="start-screen">
+        <h1>Введите ваше имя</h1>
+        <input type="text" id="nameInput" placeholder="Ваше имя...">
+        <button onclick="startAnimation()">Начать</button>
+    </div>
+
+    <div id="animation-screen" class="hidden">
+        <h1 id="userName"></h1>
+        <h2 id="marchText">С 8 марта!</h2>
+        <div id="poem" class="hidden">
+            <p id="line1"></p>
+            <p id="line2"></p>
+            <p id="line3"></p>
+            <p id="line4"></p>
+            <p id="line5"></p>
+            <p id="line6"></p>
+            <p id="line7"></p>
+            <p id="line8"></p>
+        </div>
+        <audio id="bgMusic" src="music.mp3"></audio>
+        <div id="flowers-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
